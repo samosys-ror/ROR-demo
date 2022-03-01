@@ -1,0 +1,16 @@
+<div class="field">
+  <%= f.label :City %><br />
+  <%= f.text_field :price %>
+</div>
+
+<div class="field">
+  <%= f.label :zipcode %><br />
+  <%= f.number_field :quantity %>
+</div>
+
+<%= f.fields_for :categories do |cf| %>
+  <div class="field">
+    <%= cf.label :name, "address:" %><br />
+    <%= cf.text_field :name %>
+  </div>
+<% end %>
